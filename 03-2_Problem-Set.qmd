@@ -1,0 +1,92 @@
+---
+title: "03-2 Problem Set"
+author: 
+format: pdf
+---
+
+Complete the following, replacing the *italic* text. Knit this document to a pdf, **double check the pdf document for errors**, and submit this to this week's Problem Set assignment on Canvas. 
+
+## Problem 1 - Function
+
+Below write a function that converts a flowrate of ftˆ3/second to mˆ3/s and make sure it can handle `NA` values. Remember this from last week? Just make your code into a function, but make sure to use descriptive names for your function and arguments and make sure your code is formatted nicely with "Code>Reformat Code". 
+ 
+
+```{r}
+# Answer here
+```
+
+## Problem 2 - Packages
+
+Find a package in the CRAN or bioconductor that you think you might use in a future class, or job, or project. 
+
+What is the name of your chosen package? 
+
+*answer here*
+
+What is the Description of your chosen package?
+
+*answer here*
+
+Why did you choose this package?
+
+*answer here*
+
+Does your package have a vignette? If so does it seem helpful after a quick skim?
+
+*answer here*
+
+What are the key functions in the package? What is their usage and key arguments?
+
+*answer here*
+
+Provide a useful-to-you example from one of the functions documentation that you read.
+
+```{r}
+#Answer here
+```
+
+What was not helpful or unclear about the package documentation? 
+
+*answer here*
+
+## Problem 3 - Using comments
+
+Add comments after each line of the following code to explain what it does. Use the help documentation of functions you don't know. 
+
+```{r}
+compute.stat <- function(xvec) {
+  ave <- mean(xvec)
+  var <- var(xvec)
+  CV <- sqrt(var)/ave  #CV is sd/mean
+  cat(ave, var, CV, "\n") 
+  out <- list(ave=ave, var=var, sd=sqrt(var), CV=CV)
+  return(out)
+}
+```
+
+
+## Problem 4 - Debugging
+
+Debug the following code which is meant to calculate summary statistics of several measurements of iris flowers. Comment out the broken code, copy and paste each line on a new line, then fix it. Add a comment underneath each fixed line about what was wrong.  
+
+```{r}
+iris
+
+# mean sepal width
+mean(Sepal.Width) 
+
+# mean sepal width of setosa species
+mean(iris[iris$Species == "setosa", "Sepal.Width"]
+     
+# mean sepal width of versicolor species
+mean(iris[iris$Species == setosa, "Sepal.Width"])
+     
+# mean sepal width of virginica species
+mean(iris[iris$Species = "virginica", "Sepal.Width"])
+
+```
+
+
+
+
+W
