@@ -86,7 +86,3 @@ mean(iris[iris$Species = "virginica", "Sepal.Width"])
 
 ```
 
-
-
-
-W

@@ -29,7 +29,7 @@ This week our goals are to be able to:
 -   Use Packages to access functions from the R community
 -   Organize code into logical blocks and use comments to help
     understand code
--   Use RStudios formatting tools to avoid common errors
+-   Use RStudio's formatting tools to avoid common errors
 -   Identify common errors and strategies for fixing/debugging them
 
 Reading:

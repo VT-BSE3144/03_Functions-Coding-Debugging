@@ -24,6 +24,45 @@ round(y / sum(y, na.rm = TRUE) * 100, 1)
 round(z / sum(z, na.rm = TRUE) * 100, 1)
 ```
 
+```{r, error=TRUE}
+percent_total <- function(xvec) {
+  mean(is.na(x))
+  x / sum(x, na.rm = TRUE)
+  round(x / sum(x, na.rm = TRUE) * 100, 1)
+}
+
+percent_total(xvec = 1)
+```
+
+Note that clicking show traceback will allow you to see where the error occured.
+
+```{r, error=TRUE}
+percent_total <- function(xvec) {
+  mean(is.na(xvec)) # % of values that are NA
+  xvec / sum(xvec, na.rm = TRUE)
+  return(round(xvec / sum(xvec, na.rm = TRUE) * 100, 1))
+}
+
+percent_total(xvec = c(1, NA, 1))
+
+mean(is.na(c(1, NA, 1)))
+```
+
+```{r}
+library(tidyverse)
+percent_total <- function(xvec) {
+  tibble(# % of values that are NA
+    mean(is.na(xvec)),
+    # fraction of total for each value
+    xvec / sum(xvec, na.rm = TRUE),
+    # percent of total to 1 decimal
+    round(xvec / sum(xvec, na.rm = TRUE) * 100, 1))
+}
+
+percent_total(xvec = c(1, NA, 1))
+```
+
+
 ### Example 2
 
 -   Create a function `LW()` with three arguments: a vector lengths, and values a and b
