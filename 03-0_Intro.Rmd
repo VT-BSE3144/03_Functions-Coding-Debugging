@@ -1,16 +1,13 @@
 ---
-title: "Week 03 Functions, Best-coding Practices, and Debugging Intro"
-author: "Clay Wright"
-format: html
-toc: true
-editor: 
-  markdown: 
-    wrap: 72
+output: html_document
+params:
+  version: 1.0
 ---
 
-```{r}
-#| label: setup
-#| include: false
+# Functions, Best-coding Practices, and Debugging Intro
+
+
+```{r setup, include = FALSE}
 
 library(tidyverse)
 ```
